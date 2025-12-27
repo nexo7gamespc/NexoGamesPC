@@ -1,0 +1,122 @@
+#titulo_nombre-pag {
+    background-color: gray;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+#explicacion {
+    color: #b1b1b1;
+}
+
+body {
+    background-color: rgb(81, 81, 81);
+}
+
+#nav_contacto {
+    font-family: sans-serif;
+    text-align: center;
+    color: rgb(177, 177, 177);
+    text-decoration: none;
+    background-color: rgb(34, 34, 34);
+}
+
+#lista_juegos {
+    font-family: sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+#solicitar_juego {
+    font-family: sans-serif;
+}
+
+#email_solicitar {
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #b1b1b1;
+}
+
+#instruccion_descarga {
+    font-family: sans-serif;
+    color: aliceblue;
+}
+
+.link_juegos {
+    text-decoration: none;
+    color: #b1b1b1;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+a {
+    font-size: large;
+}
+
+.contenedor-desplegable-custom {
+    margin: 20px 0;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.detalles-custom {
+    border: 1px solid #7d7d7d;
+    border-radius: 10px;
+    background-color: #737373;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.detalles-custom[open] {
+    border-color: #343434;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-custom {
+    padding: 16px;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: #171c23;
+    user-select: none;
+}
+
+/* Quitar flecha por defecto en Safari/Chrome */
+.titulo-custom::-webkit-details-marker {
+    display: none;
+}
+
+/* Nuestra flecha personalizada */
+.titulo-custom::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #343434;
+    border-bottom: 2px solid #343434;
+    margin-right: 12px;
+    transform: rotate(-45deg);
+    transition: transform 0.3s ease;
+}
+
+.detalles-custom[open] .titulo-custom::before {
+    transform: rotate(45deg);
+}
+
+.contenido-custom {
+    padding: 0 16px 16px 36px;
+    color: #475569;
+    line-height: 1.6;
+    /* Animación de entrada */
+    animation: aparecerDeslizando 0.4s ease-out;
+}
+
+@keyframes aparecerDeslizando {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
